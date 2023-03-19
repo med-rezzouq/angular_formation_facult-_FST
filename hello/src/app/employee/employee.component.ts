@@ -7,7 +7,7 @@ import {RecordsService} from "../services/records.service";
   styleUrls: ['./employee.component.css'],
   providers : [RecordsService]
 })
-export class EmployeeComponent {
+export class EmployeeComponent implements OnInit{
   employee1 : string[]=[] 
   employee2 : string[]=[] 
   employee3: string[] = []
@@ -22,5 +22,6 @@ export class EmployeeComponent {
     public getEmployee3() { 
     this.employee3=this.service.getInfo3(); 
     } 
-
+    ngOnInit(): void { 
+    }
 }
